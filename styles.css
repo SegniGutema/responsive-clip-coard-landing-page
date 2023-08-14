@@ -1,0 +1,218 @@
+@import url("https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;600&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+body {
+  font-size: 18px;
+  font-family: "Bai Jamjuree", sans-serif;
+  background-color: white;
+  width: 100%;
+  display: grid;
+  gap: 1rem;
+}
+:root {
+  --Strong-Cyan: hsl(171, 66%, 44%);
+  --Light-Blue: hsl(233, 100%, 69%);
+  --Dark-Grayish-Blue: hsl(210, 10%, 33%);
+  --Grayish-Blue: hsl(201, 11%, 66%);
+}
+main {
+  display: grid;
+  gap: 5rem;
+  width: 100%;
+  height: auto;
+}
+h1,
+p {
+  text-align: center;
+}
+h1 {
+  font-size: 1.6rem;
+  color: var(--Dark-Grayish-Blue);
+}
+p {
+  font-size: 0.8rem;
+  color: var(--Grayish-Blue);
+  font-weight: 400;
+  line-height: 1.5;
+  max-width: 250px;
+}
+section {
+  width: 90%;
+  display: grid;
+  place-items: center;
+  gap: 3rem;
+  margin-inline: auto;
+}
+.clipboard-logo {
+  width: 5rem;
+  aspect-ratio: 1;
+}
+.section-header {
+  display: grid;
+  gap: 1rem;
+  max-width: 600px;
+}
+.snippets-category,
+.tools-grid,
+.company-logos {
+  display: grid;
+  gap: 2rem;
+}
+.snippets-category > div {
+  display: grid;
+  gap: 10px;
+}
+.tools-grid > div {
+  display: grid;
+  gap: 2rem;
+}
+.snippets-category h1,
+.tools-grid h1 {
+  font-size: 1.3rem;
+}
+.snippets-body {
+  display: grid;
+  gap: 2rem;
+}
+img {
+  margin-inline: auto;
+  display: block;
+}
+.blacklists-content,
+.plain-text-content,
+.sneak-preview-content {
+  display: grid;
+  gap: 1rem;
+}
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+  border: 2px s olid green;
+}
+button {
+  margin-inline: auto;
+  padding-inline: 2rem;
+  height: 50px;
+  border-radius: 40px;
+  border: none;
+  background-color: var(--Strong-Cyan);
+  color: white;
+  margin-inline: auto;
+  border: 2px s olid green;
+}
+button:nth-of-type(2) {
+  background-color: var(--Light-Blue);
+}
+.desktop,
+.devices {
+  width: min(90%, 500px);
+}
+
+footer {
+  display: grid;
+  gap: 2rem;
+  background-color: rgb(221, 219, 219);
+  min-height: 50px;
+}
+footer .clipboard-logo {
+  width: 3rem;
+}
+.navs {
+  display: grid;
+  gap: 2rem;
+  margin-inline: auto;
+}
+.navs p {
+  text-align: center;
+}
+.navs a {
+  text-decoration: none;
+}
+.navs a:hover {
+  color: var(--Strong-Cyan);
+}
+.social-icons {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1.5rem;
+  margin-inline: auto;
+}
+button:hover {
+  opacity: 85%;
+}
+@media (min-width: 800px) {
+  body {
+    gap: 2rem;
+  }
+  .clipboard-logo {
+    width: 7rem;
+  }
+  .section-header h1 {
+    font-size: 2.3rem;
+    max-width: 600px;
+  }
+  .section-header p {
+    max-width: 530px;
+  }
+  #about h1 {
+    font-size: 8rem;
+    width: 100%;
+  }
+  #snippets-section {
+    width: 100%;
+    padding-left: 0;
+    margin-inline: unset;
+  }
+  .snippets-category div {
+    grid-template: "h" min-content "p" min-content;
+  }
+  .snippets-category p {
+    text-align: left;
+    grid-area: p;
+  }
+  .snippets-category h1 {
+    text-align: left;
+    grid-area: h;
+  }
+  .snippets-body {
+    width: 100%;
+    display: flex;
+    gap: 8vw;
+    margin-inline: unset;
+    padding-right: 2rem;
+  }
+  .desktop {
+    position: relative;
+    left: -15px;
+    margin-inline: unset;
+    width: min(50vw, 600px);
+    left: -15px;
+  }
+
+  .tools-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .company-logos {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    column-gap: 3rem;
+  }
+  footer {
+    display: flex;
+    align-items: center;
+    height: 100px;
+  }
+  .navs {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 10px;
+    column-gap: 1rem;
+  }
+  .navs p {
+    text-align: left;
+  }
+}
